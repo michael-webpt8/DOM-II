@@ -22,6 +22,24 @@ window.addEventListener('load', (event) => {
 });
 
 /**
+ *  3. dblclick event
+ */
+const funBus = document.querySelector('#bus');
+funBus.addEventListener('dblclick', (event) => {
+	const funBusImg = document.querySelector('img#bus');
+	funBusImg.classList.toggle('fun-bus');
+});
+
+/**
+ * 4. mousedown event
+ */
+const destinationImg = document.querySelector('.content-destination img');
+console.log(destinationImg);
+destinationImg.addEventListener('mousedown', (event) => {
+	console.log(event.currentTarget);
+});
+
+/**
  * prevent nav from refreshing.
  */
 const navPreventRefresh = document.querySelectorAll('.nav-link');
