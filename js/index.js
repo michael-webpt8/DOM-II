@@ -34,9 +34,9 @@ funBus.addEventListener('dblclick', (event) => {
  * 4. mousedown event
  */
 const destinationImg = document.querySelector('.content-destination img');
-console.log(destinationImg);
 destinationImg.addEventListener('mousedown', (event) => {
-	console.log(event.currentTarget);
+	event.currentTarget.style.transition = 'all .3s ease-in-out';
+	event.currentTarget.style.transform = 'scale(.5)';
 });
 
 /**
