@@ -40,15 +40,8 @@ destinationImg.addEventListener('mousedown', event => {
 });
 
 /**
- * prevent nav from refreshing.
+ *  5. key up event
  */
-const navPreventRefresh = document.querySelectorAll('.nav-link');
-navPreventRefresh.forEach(navLinks => {
-  navLinks.addEventListener('click', event => {
-    event.preventDefault();
-  });
-});
-
 window.addEventListener('keyup', event => {
   let key = event.key;
   let navItem = document.querySelector('.nav-link');
@@ -73,4 +66,27 @@ window.addEventListener('keyup', event => {
   } else {
     navItem.classList.toggle('highlight');
   }
+});
+
+/**
+ *  6. focus event
+ */
+
+// const destinationBtnOne = document.querySelectorAll('.destination .btn')[0];
+// destinationBtnOne.addEventListener(
+//   'focus',
+//   event => {
+//     console.log(event.target);
+//   },
+//   true
+// );
+
+/**
+ * prevent nav from refreshing.
+ */
+const navPreventRefresh = document.querySelectorAll('.nav-link');
+navPreventRefresh.forEach(navLinks => {
+  navLinks.addEventListener('click', event => {
+    event.preventDefault();
+  });
 });
