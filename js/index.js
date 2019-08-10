@@ -69,7 +69,22 @@ window.addEventListener('keyup', event => {
 });
 
 /**
- *  6. focus event
+ * 6. mouseup event and nest
+ */
+
+const destinationSection = document.querySelector('.destination');
+const destinationButton = document.querySelector('.destination .btn');
+
+destinationSection.addEventListener('mouseup', event => {
+  event.currentTarget.style.backgroundColor = 'lightblue';
+});
+destinationButton.addEventListener('mouseup', event => {
+  event.stopPropagation();
+  event.currentTarget.style.backgroundColor = 'red';
+});
+
+/**
+ *   focus event
  */
 
 // const destinationBtnOne = document.querySelectorAll('.destination .btn')[0];
@@ -81,6 +96,14 @@ window.addEventListener('keyup', event => {
 //   true
 // );
 
+/**
+ * 1. click
+ * 2. load
+ * 3. dblclick
+ * 4. mousedown
+ * 5. keyup
+ * 6. mouseup
+ */
 /**
  * prevent nav from refreshing.
  */
