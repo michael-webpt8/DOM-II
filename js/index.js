@@ -84,6 +84,15 @@ destinationButton.addEventListener('mouseup', event => {
 });
 
 /**
+ * 7. context event
+ */
+const noContextOnImg = document.querySelector('.inverse-content img');
+console.log(noContextOnImg);
+noContextOnImg.addEventListener('contextmenu', event => {
+  event.preventDefault();
+});
+
+/**
  *   focus event
  */
 
@@ -103,6 +112,7 @@ destinationButton.addEventListener('mouseup', event => {
  * 4. mousedown
  * 5. keyup
  * 6. mouseup
+ * 7. resize
  */
 /**
  * prevent nav from refreshing.
