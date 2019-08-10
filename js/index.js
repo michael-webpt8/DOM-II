@@ -49,7 +49,7 @@ navPreventRefresh.forEach(navLinks => {
   });
 });
 
-window.addEventListener('keypress', event => {
+window.addEventListener('keyup', event => {
   let key = event.key;
   let navItem = document.querySelector('.nav-link');
   switch (key) {
@@ -65,5 +65,12 @@ window.addEventListener('keypress', event => {
     case 'c':
       navItem = document.querySelectorAll('.nav-link')[3];
       break;
+    default:
+      console.log('that is not the key you are looking for.....');
+  }
+  if (!navItem.classList.contains('highlight')) {
+    navItem.classList.toggle('highlight');
+  } else {
+    navItem.classList.toggle('highlight');
   }
 });
