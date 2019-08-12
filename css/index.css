@@ -211,7 +211,8 @@ img {
   }
 }
 .main-navigation .nav-container .nav .highlight {
-  color: dodgerblue;
+  color: firebrick;
+  font-size: 2rem;
 }
 .main-navigation .nav-container .nav a {
   font-size: 1.6rem;
