@@ -40,31 +40,19 @@ destinationImg.addEventListener('mousedown', event => {
 });
 
 /**
- *  5. key up event
+ *  5. key up event NOT WORKING.
  */
 window.addEventListener('keyup', event => {
   let key = event.key;
-  let navItem = document.querySelector('.nav-link');
+  let header = null;
   switch (key) {
-    case 'h':
-      navItem = document.querySelectorAll('.nav-link')[0];
-      break;
-    case 'a':
-      navItem = document.querySelectorAll('.nav-link')[1];
-      break;
-    case 'b':
-      navItem = document.querySelectorAll('.nav-link')[2];
-      break;
-    case 'c':
-      navItem = document.querySelectorAll('.nav-link')[3];
+    case 'p':
+      header = document.querySelector('.content-destination h2');
+      console.log(header);
+      header.classList.toggle('highlight');
       break;
     default:
       console.log('that is not the key you are looking for.....');
-  }
-  if (!navItem.classList.contains('highlight')) {
-    navItem.classList.toggle('highlight');
-  } else {
-    navItem.classList.toggle('highlight');
   }
 });
 
@@ -92,21 +80,24 @@ noContextOnImg.addEventListener('contextmenu', event => {
 });
 
 /**
- *
+ * 8. mouse over
  */
+
+const navs = document.querySelectorAll('.destination h4');
+navs.forEach(links => {
+  links.addEventListener('mouseover', event => {
+    event.target.style.color = 'red';
+  });
+});
 
 /**
- *   focus event
+ * 9. mouseout
  */
-
-// const destinationBtnOne = document.querySelectorAll('.destination .btn')[0];
-// destinationBtnOne.addEventListener(
-//   'focus',
-//   event => {
-//     console.log(event.target);
-//   },
-//   true
-// );
+navs.forEach(links => {
+  links.addEventListener('mouseout', event => {
+    event.target.style.color = '#212529';
+  });
+});
 
 /**
  * 1. click
@@ -116,6 +107,8 @@ noContextOnImg.addEventListener('contextmenu', event => {
  * 5. keyup
  * 6. mouseup
  * 7. contextmenu
+ * 8. mouseover
+ * 9. mouseout
  */
 /**
  * prevent nav from refreshing.
